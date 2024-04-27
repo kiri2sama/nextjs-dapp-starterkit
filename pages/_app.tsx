@@ -17,13 +17,15 @@ const { chains, provider, webSocketProvider } = configureChains(
     chain.polygon,
     chain.optimism,
     chain.arbitrum,
+    chain.Base,
+    
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
-      ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
+      ? [chain.goerli, chain.sepolia, chain.kovan, chain.rinkeby, chain.ropsten]
       : []),
   ],
   [
     alchemyProvider({
-      alchemyId: "_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC",
+      alchemyId: "nGi9ziIANFbsfPrgjqKZDqWgfCNdR7br",
     }),
     publicProvider(),
   ]
